@@ -1,0 +1,27 @@
+<view>
+  <image class="img" src="https://xbzx.online/aaimg/img.png" mode="aspectFit" />
+</view>
+
+<view class="grid-container" wx:for="{{dataList}}" wx:key="id" bindtap="tapBanner" data-item="{{item}}">
+
+  <view class="middle_body">
+    <view class="grid-item">
+      <text class="title">{{item.n1}}</text>
+    </view>
+
+    <view class="grid-item">
+      <text class="titlebody">{{item.n2}}</text>
+    </view>
+    <view class="grid-item">
+      <text class="titlebody">{{item.n3}}</text>
+    </view>
+  </view>
+
+  <image src="../../images/right.png" class="arrow"></image>
+
+
+
+</view>
+<view class="foot">
+</view>
+

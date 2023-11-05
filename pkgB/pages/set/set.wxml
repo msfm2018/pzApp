@@ -1,0 +1,10 @@
+<!-- pages/version/version.wxml -->
+<view class="container">
+  <view class="title">版本信息</view>
+  <text class="version">当前版本：1.0.0</text>
+  <view class="changelog">
+    <!-- <text class="changelog-title">更新日志：</text>
+    <text class="changelog-content">1. 新增功能A</text>
+    <text class="changelog-content">2. 修复了Bug B</text> -->
+  </view>
+</view>

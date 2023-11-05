@@ -1,0 +1,73 @@
+.item{
+  margin: 0 auto;
+  border: 1px solid #cccccc;
+  height: 100rpx;
+  width: 100%;
+  border-radius: 16rpx;
+  background-color: #ffffff;
+  margin-bottom: 15px; 
+  margin-top: 10rpx;
+  line-height: 100rpx;
+}
+.item input{
+  height: 100rpx;
+  line-height: 40px;
+  margin-left: 10px; 
+}
+.hr{
+  padding-top: 20px;
+  }
+  .content{
+    margin: 20rpx;
+  }
+  textarea {
+    margin-top: 30rpx;
+    border: 1px solid #ccc;
+    border-radius: 5rpx;
+    width: 88%;
+    padding-right: 50rpx;
+  }
+.t1{
+  font-family:'Courier New', Courier, monospace;
+  font-size: 18px;
+  color: #999999;
+  margin-bottom: 40rpx;
+}
+.othermemo{
+  margin-left: 20rpx;
+
+}
+.form-group {
+  width: 100%;
+}
+.grid-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20rpx;
+}
+
+.flex-container {
+  display: inline-flex; /* 将子元素水平排列 */
+  align-items: center;
+}
+
+.tui-menu-item {
+  margin-right: 16rpx;
+  margin-left: 6rpx; 
+}
+
+button{
+  font-size: 18px;
+  position: fixed;
+  bottom: 1rpx;
+  width: 100%;
+  background-color: #007bff;
+  color: #fff;
+  text-align: center;
+  font-family:'Courier New', Courier, monospace;
+}
+.holder{
+  font-size: 16px;
+  color: #999999;
+}

@@ -1,0 +1,86 @@
+{
+  "pages": [
+    "pages/main",
+    "pages/login/login",
+    "pages/home/index",
+    "pages/about/index",
+    "pages/about/info",
+    "pages/order/index",
+    "pkgC/base/index",
+    "pages/companions/index",
+    "pages/protocol/p1",
+    "pages/protocol/p2"
+  ],
+  "subpackages": [
+    {
+      "root": "pkgA",
+      "pages": [
+        "pages/index",
+        "pages/doc/desc",
+        "pages/doc/start/page1"
+      ]
+    },
+    {
+      "root": "pkgB",
+      "pages": [
+        "pages/set/set",
+        "pages/about/info"
+      ]
+    }
+  ],
+  "preloadRule": {
+    "pages/about/index": {
+      "packages": [
+        "pkgB"
+      ],
+      "network": "all"
+    }
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "小毛驴助医",
+    "navigationBarTextStyle": "black",
+    "onReachBottomDistance": 50
+  },
+  "注释编译错误": "https://developers.weixin.qq.com/community/develop/doc/00044a99644748f4277f5b74553c00",
+  "tabBar": {
+    "color": "#6e6d6b",
+    "selectedColor": "#e64340",
+    "borderStyle": "white",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/home/index",
+        "text": "首页",
+        "iconPath": "/images/tabs/home.png",
+        "selectedIconPath": "/images/tabs/home_active.png"
+      },
+      {
+        "pagePath": "pages/order/index",
+        "text": "订单",
+        "iconPath": "/images/tabs/order.png",
+        "selectedIconPath": "/images/tabs/order_active.png"
+      },
+      {
+        "pagePath": "pages/about/index",
+        "text": "我的",
+        "iconPath": "/images/tabs/user.png",
+        "selectedIconPath": "/images/tabs/user_active.png"
+      }
+    ]
+  },
+  "requiredPrivateInfos": [
+    "getLocation",
+    "chooseAddress",
+    "chooseLocation"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "获取最近的商家"
+    }
+  },
+  "usingComponents": {},
+  "lazyCodeLoading": "requiredComponents",
+  "sitemapLocation": "sitemap.json"
+}

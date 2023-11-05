@@ -1,0 +1,41 @@
+<view class="order">
+  <block wx:if="{{dataList.length > 0}}">
+    <block wx:for="{{dataList}}" wx:for-index="index" wx:key="id">
+      <view class="list-item" bindtouchstart="handleTouchStart" bindtouchmove="handleTouchMove" bindtouchend="handleTouchEnd" data-index="{{index}} " style="transform: translateX({{item.translateX || 0}}px)">
+        <view class="content_">
+          <view class="title">
+            <view>订单编号：{{item.orderid}}</view>
+            <view wx:if="{{item.order_state==0}}">派单中</view>
+            <view wx:elif="{{item.order_state==2}}">服务完成</view>
+            <view wx:else> 服务进行中</view>
+            <!-- <view wx:if="{{item.order_state}}=='0'">派单中</view>
+            <view wx:else> 派单完成</view>            -->
+          </view>
+          <view class="card">
+            <view class="card-text">
+              <text style="font-weight: bold;font-size: 18px;margin-top: 10rpx;margin-bottom: 10rpx;">{{item.servicename}}</text>
+              <text>姓名：{{item.name}}</text>
+              <text>医院：{{item.hospital}}</text>
+              <text>诊室：{{item.department}}</text>
+              <text>时间：{{item.orderdate}}</text>
+              <!-- <text>手机：{{item.phone}}</text> -->
+              <text>备注：{{item.other}}</text>
+              <text>接单人姓名：{{item.companion_name}}</text>
+              <text>接单人电话：{{item.companion_phone}}</text>
+            </view>
+          </view>
+        </view>
+
+        <text>{{item.text}}</text>
+        <view class="delete-btn" data-index="{{index}}" data-orderid="{{item.orderid}}" bindtap="showDeleteConfirmation">删除</view>
+      </view>
+    </block>
+  </block>
+  <block wx:else>
+    <view class="centered-text">暂无数据</view>
+  </block>
+</view>
+
+<view class="foot">
+  <text></text>
+</view>

@@ -1,0 +1,27 @@
+/* pages/protocol/p1.wxss */
+
+/* 整体页面样式 */
+.privacy-policy {
+  /* background-color: #f5f5f5; */
+  color: #333;
+  padding: 20rpx;
+  font-size: 15px;
+  line-height: 1.5;
+  font-family: Cursive;   /**字体类型**/
+}
+
+/* 标题样式 */
+.title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20rpx;
+}
+
+/* 章节标题样式 */
+.section-title {
+  font-size: 19px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10rpx;
+}

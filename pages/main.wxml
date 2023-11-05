@@ -1,0 +1,16 @@
+<!--pages/main.wxml-->
+<view class="center-container">
+  <view class="v1">
+    <image class="logo" src="https://xbzx.online/login/logo.png" mode="aspectFit" />
+  </view>
+
+  <view class="button-container">
+    <image class="left-button" src="https://xbzx.online/login/000-1.png" mode="aspectFit" bindtap="leftButtonTapped" />
+    <!-- <image class="right-button"  src="/images/pzy.png" mode="aspectFit" bindtap="rightButtonTapped" /> -->
+    <image class="right-button" src="https://xbzx.online/login/000-2.png" mode="aspectFit" bindtap="rightButtonTapped" />
+  </view>
+  <view>
+    <!-- <button hidden="{{!show}}" catchtap="toCall">客服</button> -->
+  </view>
+
+</view>

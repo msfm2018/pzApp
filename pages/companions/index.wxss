@@ -1,0 +1,60 @@
+
+.order-item {
+  /* 你的订单项样式 */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.apply-button {
+  background-color: #007AFF;
+  color: #FFF;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+/* ---------------- */
+text{
+  margin: 0 20rpx;
+}
+.delete-btn {
+  width: 120rpx;
+  font-size: 14px;
+  transition: transform 0.3s ease;
+}
+.title {
+  /* width: 94%; */
+  line-height: 30px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #f5f8f4;
+  padding: 0 3%;
+}
+.order{
+  margin-top: 10rpx;
+}
+/* ------------------------------ */
+
+
+.tabbar {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+}
+
+.tab-item {
+  padding: 10px 15px;
+  font-size: 16px;
+  /* 其他按钮的样式 */
+
+  /* 初始状态下的按钮颜色 */
+  color: #333;
+}
+
+.selected {
+  /* 选中状态下的按钮颜色 */
+  color: #007bff; /* 例如：蓝色 */
+}
+
+

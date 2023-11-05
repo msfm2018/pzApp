@@ -1,0 +1,34 @@
+/* pages/main.wxss */
+.center-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+
+}
+.logo {
+  /* border: 2rpx solid red; */
+  /* margin: 0 120rpx; */
+  /* width: 98%; */
+  /* width: 300px; */
+  border-radius: 12px;
+  /* width: 200px; 调整Logo图像的大小 */
+  /* margin-bottom: 20px; 调整Logo与按钮之间的间距 */
+  width: 100%;
+  height: 80%;
+}
+.v1 {
+  width: 100%;
+  height: 100%; 
+}
+.button-container {
+  display: flex;
+  justify-content:center;
+}
+
+.left-button,
+.right-button {
+  width: 100px; /* 调整按钮的大小 */
+  margin: 0 16px; /* 调整按钮之间的间距 */
+}

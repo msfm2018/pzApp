@@ -1,0 +1,52 @@
+<!--pages/contact/contact.wxml-->
+
+
+<view class="header-box">
+  <view class="header-box-left">
+    <button class="avatar" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">
+      <image class="avatar-img" src="{{ avatarUrl ? avatarUrl : '/images/default.png' }}" mode="aspectFill"></image>
+    </button>
+    <view class="r">
+      <view class="uid">用户ID: {{ userid }}</view>
+      <view class="nick" bindtap="editNick">{{ nick ? nick : '昵称:暂无' }}</view>
+    </view>
+  </view>
+
+</view>
+
+<!-- <button  bindtap="loginOut">测试时使用退出</button> -->
+
+
+
+<view class="container">
+  <view class="title">常用功能</view>
+  <navigator url="/pages/about/info" class="cell with-border">
+    <text class="cell-title">个人信息</text>
+    <text class="cell-arrow">></text>
+  </navigator>
+  <navigator url="/pkgB/pages/set/set" class="cell with-border">
+    <text class="cell-title">系统设置</text>
+    <text class="cell-arrow">></text>
+  </navigator>
+
+  <view class="title">其他功能</view>
+  <button plain="true" open-type="contact" class="cell with-border ">
+    <text class="cell-title">联系客服</text>
+    <text class="cell-arrow">></text>
+  </button>
+
+  <!-- <button plain="true" hidden="{{!show}}" catchtap="toCall" class="cell with-border ">
+    <text class="cell-title">电话客服</text>
+    <text class="cell-arrow">></text>
+  
+  </button> -->
+
+  <!-- <navigator  class="cell with-border"> -->
+    <!-- <text class="cell-title">退出系统</text> -->
+    <!-- <view bind:tap="exit">返回登录</view> -->
+    <!-- <text class="cell-arrow">></text> -->
+  <!-- </navigator> -->
+
+</view>
+
+

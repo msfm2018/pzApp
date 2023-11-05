@@ -1,0 +1,146 @@
+<view>
+
+  <view class="tabbar">
+  <text class="tab-item {{currentTab === 1 ? 'selected' : ''}}" bindtap="switchToTab1">申请</text>
+  <text class="tab-item {{currentTab === 2 ? 'selected' : ''}}" bindtap="switchToTab2">系统派单</text>
+  <!-- <text class="tab-item {{currentTab === 3 ? 'selected' : ''}}" bindtap="switchToTab3">完成</text> -->
+</view>
+
+<view wx:if="{{currentTab === 1}}">
+  <!-- 显示 Tab 1 的内容 -->
+  <!-- 可以在这里加载 Tab 1 的数据 -->
+
+  <view class="order">
+  <block wx:if="{{dataList.length > 0}}">
+  <block wx:for="{{dataList}}" wx:for-index="index" wx:key="id">
+    <view class="list-item"  data-index="{{index}} " >
+      <view class="content_">
+        <view class="title">
+            <view>订单编号：{{item.orderid}}</view>
+            <view>  <button type="primary"   class="delete-btn" data-index="{{index}}" data-orderid="{{item.orderid}}" 
+              disabled="{{disabledBtns[item.orderid + '-' + index] || false}}"
+   
+            bindtap="applyForOrder">申请</button>  </view>  
+        </view>
+        <view class="card" >         
+            <view class="card-text">
+              <text style="font-weight: bold;font-size: 18px;margin-top: 10rpx;margin-bottom: 10rpx;">{{item.servicename}}</text>
+              <text>姓名：{{item.name}}</text>
+              <!-- <text>电话{{item.phone}}</text> -->
+              <text>性别：{{item.gender}}</text>
+              <text>医院：{{item.hospital}}</text>
+              <text>诊室：{{item.department}}</text>
+              <text>时间：{{item.orderdate}}</text>
+              <text>备注：{{item.other}}</text>
+             
+            </view>
+        </view>
+      </view>
+    </view>
+  </block>
+</block>
+  <block wx:else>
+    <view class="centered-text">暂无数据</view>
+  </block>
+</view>
+
+<view class="foot">
+  <text></text>
+</view> 
+
+
+
+
+
+</view>
+
+<view wx:if="{{currentTab === 2}}">
+  <!-- 显示 Tab 2 的内容 -->
+  <!-- 可以在这里加载 Tab 2 的数据 -->
+
+
+
+
+  <view class="order">
+  <block wx:if="{{agentDataList.length > 0}}">
+  <block wx:for="{{agentDataList}}" wx:for-index="index" wx:key="id">
+    <view class="list-item"  data-index="{{index}} " >
+      <view class="content_">
+        <view class="title">
+            <view>订单编号：{{item.orderid}}</view>
+            <view>  <button type="primary"   class="delete-btn" data-index="{{index}}" data-orderid="{{item.orderid}}"  data-phone="{{item.phone}}" 
+            
+   
+            bindtap="finishForOrder">完成</button>  </view>  
+        </view>
+        <view class="card" >         
+            <view class="card-text">
+              <text style="font-weight: bold;font-size: 18px;margin-top: 10rpx;margin-bottom: 10rpx;">{{item.servicename}}</text>
+              <text>姓名：{{item.name}}</text>
+              <text>电话：{{item.phone}}</text>
+              <text>性别：{{item.gender}}</text>
+              <text>医院：{{item.hospital}}</text>
+              <text>诊室：{{item.department}}</text>
+              <text>时间：{{item.orderdate}}</text>
+              <text>备注：{{item.other}}</text>
+             
+            </view>
+        </view>
+      </view>
+    </view>
+  </block>
+</block>
+  <block wx:else>
+    <view class="centered-text">暂无数据</view>
+  </block>
+</view>
+
+<view class="foot">
+  <text></text>
+</view> 
+
+
+
+</view>
+
+<view wx:if="{{currentTab === 3}}">
+
+
+
+  
+
+  <view class="order">
+  <block wx:if="{{finishDataList.length > 0}}">
+  <block wx:for="{{finishDataList}}" wx:for-index="index" wx:key="id">
+    <view class="list-item"  data-index="{{index}} " >
+      <view class="content_">
+        <view class="title">
+            <view>订单编号：{{item.orderid}}</view>
+            <view>  <text>完成</text>  </view>  
+        </view>
+        <view class="card" >         
+            <view class="card-text">
+              <text style="font-weight: bold;font-size: 18px;margin-top: 10rpx;margin-bottom: 10rpx;">{{item.servicename}}</text>
+              <text>姓名：{{item.name}}</text>
+              <text>性别：{{item.gender}}</text>
+              <text>医院：{{item.hospital}}</text>
+              <text>诊室：{{item.department}}</text>
+              <text>时间：{{item.orderdate}}</text>
+              <text>备注：{{item.other}}</text>
+             
+            </view>
+        </view>
+      </view>
+    </view>
+  </block>
+</block>
+  <block wx:else>
+    <view class="centered-text">暂无数据</view>
+  </block>
+</view>
+
+<view class="foot">
+  <text></text>
+</view> 
+</view>
+  </view>

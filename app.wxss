@@ -1,0 +1,15 @@
+/**app.wxss**/
+page {
+
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica,
+    Segoe UI, Arial, Roboto, 'PingFang SC', 'miui', 'Hiragino Sans GB', 'Microsoft Yahei', sans-serif;
+    font-size: 14px;
+    /* font-family: Cursive;    */
+    font-family: -apple-system-font,Helvetica Neue,Helvetica,sans-serif;
+    line-height: 1.6; 
+
+
+}
+.foot {
+  height: 100px;
+}

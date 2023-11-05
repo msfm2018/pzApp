@@ -1,0 +1,63 @@
+<!--pages/protocol/p1.wxml-->
+<view wx:if="{{}}"></view>
+<view>
+  <view class="privacy-policy">
+    <view class="title">《隐私政策》</view>
+
+    <view class="section">
+      <view class="section-title">尊敬的用户：</view>
+      <view>
+
+        感谢您选择使用小毛驴陪诊服务。我们深知您的隐私对您的重要性，因此，我们特此制定本《隐私政策》，以明确我们收集、使用和保护您的个人信息的目的、方式和用途。</view>
+    </view>
+
+
+
+
+
+    <view class="section">
+      <view class="section-title">一、我们收集哪些信息</view>
+      <view>身份信息：为了完成您的注册和认证，我们会收集如姓名、身份证号码、联系方式等身份信息。
+        健康信息：考虑到医疗服务的特性，我们可能会收集您的健康状况、病史、诊断结果等信息。
+        位置信息：为了为您提供更精准的服务，我们会收集您的定位信息，例如您的住址、工作地址等。
+        使用信息：我们会收集您使用小毛驴陪诊服务时的操作记录、浏览记录等信息。
+      </view>
+    </view>
+    <view class="section">
+      <view class="section-title">二、我们如何使用这些信息</view>
+      <view>
+
+        为了提供更好的服务，我们可能会与第三方服务提供商分享您的信息，例如医疗服务提供者、支付平台等。
+        在法律要求或法律程序需要的情况下，我们可能会向政府部门或司法机关提供您的信息。
+        我们不会向无关的第三方出售或出租您的个人信息。
+      </view>
+    </view>
+    <view class="section">
+      <view class="section-title">三、我们如何分享这些信息</view>
+      <view>为了提供更好的服务，我们可能会与第三方服务提供商分享您的信息，例如医疗服务提供者、支付平台等。
+        在法律要求或法律程序需要的情况下，我们可能会向政府部门或司法机关提供您的信息。
+        我们不会向无关的第三方出售或出租您的个人信息。
+      </view>
+    </view>
+    <view class="section">
+      <view class="section-title">四、我们对信息的存储和保护</view>
+      <view>我们会采取合理的安全措施，以保护您的个人信息不被未经授权的访问、使用或泄露。我们会使用加密技术来保护您的数据安全，并定期对数据进行备份。
+      </view>
+    </view>
+    <view class="section">
+      <view class="section-title">五、隐私政策的更新</view>
+
+      <view>本隐私政策可能会根据我们的业务发展、法律法规的变化或用户反馈进行更新。我们会在更新后的隐私政策中及时通知您。请您定期查看我们的隐私政策以了解最新情况。
+      </view>
+    </view>
+    <view class="section">
+      <view class="section-title">六、如何联系我们</view>
+
+
+      <view>如果您对我们的隐私政策有任何疑问或建议，可以通过以下方式联系我们：
+        电话：189-1007-2272
+        邮箱：【msfm@163.com】（mailto:msfm@163.com）
+      </view>
+    </view>
+  </view>
+</view>

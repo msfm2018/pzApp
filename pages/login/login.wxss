@@ -1,0 +1,95 @@
+/* pages/login/login.wxss */
+.content {
+	margin-top: 40px;
+}
+
+.account {
+	display: flex;
+	flex-direction: row;
+	padding-left: 40rpx;
+	padding-top: 40rpx;
+	padding-bottom: 20rpx;
+	width: 90%;
+}
+
+.title {
+	margin-right: 64rpx;
+	font-weight: bold;
+}
+
+.hr {
+	border: 1rpx solid #ccc;
+	opacity: 0.2;
+	width: 90%;
+	margin: 0 auto;
+}
+
+.btn {
+	width: 90%;
+	margin-top: 86rpx;
+  color: #999;
+  margin-bottom: 60rpx;
+}
+
+.operate {
+	display: flex;
+	flex-direction: row;
+}
+
+.operate view {
+	margin: 0 auto;
+	margin-top: 86rpx;
+	font-size: 16px;
+	color: #333;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.label {
+  font-size: 8px;
+  margin-right: 10rpx;
+}
+
+
+.radio-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20rpx;
+  margin-top: 20rpx;
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  /* margin-right: 20rpx; */
+  margin-bottom: 40rpx;
+}
+
+.radio-label radio {
+  margin-right: 10rpx;
+}
+
+.login-button {
+  background-color: #3498db;
+  color: #fff;
+  padding: 10rpx 20rpx;
+  border-radius: 5rpx;
+  cursor: pointer;
+}

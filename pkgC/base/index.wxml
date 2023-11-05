@@ -1,0 +1,98 @@
+<!--pkgC/base/index.wxml 陪诊员基础信息-->
+
+<view class="content">
+
+  <view class="register-container">
+    <view class="hr"></view>
+    <view class="form-group">
+      <text>姓名</text>
+      <input class="item" type="text" placeholder-class="holder" placeholder="请填写姓名" bindinput="inputName" />
+    </view>
+    <view class="form-group">
+      <text>性别</text>
+      <radio-group class="item" bindchange="radioChange">
+
+        <label class="radio" wx:for="{{items}}">
+          <view class="flex-container">
+            <radio color="#007aff" value="{{item.name}}" checked="{{item.checked}}" />
+            <view class="tui-menu-item">{{item.value}}</view>
+          </view>
+        </label>
+
+      </radio-group>
+
+    </view>
+    <view class="form-group">
+      <text>年龄</text>
+      <input class="item" type="text" placeholder-class="holder" placeholder="请填写周岁年龄" bindinput="inputage" />
+    </view>
+    <view class="form-group">
+      <text>手机号</text>
+      <input class="item" type="text" placeholder-class="holder" placeholder="用作登录账号与联系方式" bindinput="inputPhone" />
+    </view>
+
+    <view class="form-group">
+      <text>密码</text>
+      <input class="item" type="text" placeholder-class="holder" placeholder="请填写登录密码" bindinput="inputPwd" />
+    </view>
+
+    <view class="form-group">
+      <text>身份证</text>
+      <input class="item" type="text" placeholder-class="holder" placeholder="请输入身份证号码" bindinput="inputCardId" />
+    </view>
+
+
+    <view class="form-group">
+      <text>住址</text>
+      <input class="item" type="text" placeholder-class="holder" placeholder="请输入地址" bindinput="inputAddress" />
+    </view>
+
+
+    <view class="form-group">
+      <text>工作经验年限</text>
+      <input class="item" type="number" placeholder="请输入工作经验年限" placeholder-class="holder" bindinput="inputExperienceYears" />
+    </view>
+
+    <view class="form-group">
+      <text>资格证书</text>
+      <input class="item" placeholder="请输入资格证书编号" placeholder-class="holder" bindinput="inputQualification" />
+    </view>
+
+    <view class="form-group">
+      <text class="label">专长领域</text>
+      <textarea placeholder="请输入专长领域" placeholder-class="holder" bindinput="inputSpecialties"></textarea>
+    </view>
+
+    <view class="form-group">
+      <text class="label">个人简介</text>
+      <textarea placeholder="请输入个人简介" bindinput="inputProfileText" placeholder-class="holder"></textarea>
+    </view>
+
+    <view class="foot1"></view>
+
+  </view>
+</view>
+
+<view>
+  <view class="xieyi">
+    <!-- <icon type="success" color="red" size="18" /> -->
+
+
+    <view class="links">
+      <radio class="agree" checked="{{isAgreed}}" bindtap="agreeChanged" />
+
+      <text class="agree-text">同意</text>
+      <navigator class="opinion" url="/pages/protocol/p2">《用户服务协议》</navigator>
+      <text>和</text>
+      <navigator class="opinion" url="/pages/protocol/p1">《隐私政策》</navigator>
+    </view>
+  </view>
+</view>
+
+
+<button bindtap="register">提交</button>
+
+<view class="foot"></view>
+
+
+

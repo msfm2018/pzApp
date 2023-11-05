@@ -1,0 +1,28 @@
+<!--pages/login/login.wxml-->
+<view class="content">
+  <view style="visibility: {{inputVisibility}}">
+    <view class="account">
+      <view class="title">帐号</view>
+      <view class="num"><input type="number" bindinput="accountInput" placeholder="帐号" placeholder-style="color:#999;" /></view>
+    </view>
+    <view class="hr"></view>
+    <view class="account" style="visibility: {{inputVisibility}}">
+      <view class="title">密码</view>
+      <view class="num"><input bindinput="pwdBlur" placeholder="请输入密码" password="{{true}}" placeholder-style="color:#999;" /></view>
+    </view>
+
+    <view class="hr"></view>
+  </view>
+  <button class="btn" disabled="{{disabled}}" type="{{btnstate}}" bind:tap="login">登录</button>
+
+
+
+  <view class="operate">
+    <view>
+      <navigator url="../../pkgC/base/index">注册陪诊师</navigator>
+    </view>
+    <!-- <view><navigator url="../company/company">企业用户注册</navigator></view> -->
+    <!-- <view>找回密码</view> -->
+  </view>
+
+</view>

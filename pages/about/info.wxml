@@ -1,0 +1,13 @@
+
+
+  <view class="main">
+    <view class="form-box">
+      <form bindsubmit="formSubmit">
+        <input value="{{nick}}" name="nick" placeholder="昵称" />
+        <input type="number" name="phone" value="{{phone}}" placeholder="手机号" />
+        <input name="detail" value="{{detail}}" placeholder="详细地址" />
+        <button form-type="submit">设置</button>
+      </form>
+    </view>
+  </view>
+

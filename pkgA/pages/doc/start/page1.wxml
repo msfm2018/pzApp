@@ -1,0 +1,84 @@
+<view class="hr"></view>
+<view class="content">
+  <view class="t1">就诊信息</view>
+  <view class="grid-container">
+    <view class="form-group">
+      <view>就诊医院</view>
+      <view>
+        <picker mode="selector" range="{{hospitalList}}" class="item holder" bindchange="hospitalChange" >
+          {{selectedHospital}}
+        </picker>
+      </view>
+      <view wx:if="{{isOtherHospital}}">
+        <view>医院名称</view>
+      </view>
+
+      <view wx:if="{{isOtherHospital}}">
+        <view>
+          <input type="text" class="item" placeholder="请输入文本" bindinput="onTextInput" />
+        </view>
+      </view>
+    </view>
+    <view class="form-group">
+      <view>科室</view>
+      <view>
+        <input type="text" class="item" placeholder="科室名称" placeholder-class="holder" bindinput="onTextInput2" />
+      </view>
+    </view>
+
+    <view class="form-group">
+      <view>就诊时间</view>
+      <view>
+
+
+        <picker class="item" mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+          <input value='{{time}}' name="dd_time" placeholder='选择时间' placeholder-class="holder" disabled />
+
+        </picker>
+
+      </view>
+    </view>
+    <view class="form-group">
+      <view>就诊人</view>
+      <view>
+        <input type="text" class="item" placeholder="姓名" placeholder-class="holder" bindinput="onTextInput3" />
+      </view>
+    </view>
+    <view class="form-group">
+      <view>手机号</view>
+      <view>
+        <input type="number" class="item" placeholder="就诊人手机号" placeholder-class="holder" bindinput="onTextInput4" />
+      </view>
+    </view>
+    <view class="form-group">
+      <view>陪诊员性别</view>
+      <view>
+        <radio-group class="item" bindchange="radioChange">
+
+          <label class="radio" wx:for="{{items}}">
+            <view class="flex-container">
+              <radio color="#007aff" value="{{item.name}}" checked="{{item.checked}}" />
+              <view class="tui-menu-item">{{item.value}}</view>
+            </view>
+          </label>
+        </radio-group>
+      </view>
+    </view>
+  </view>
+  <view class="form-group othermemo">
+    <text>其它备注</text>
+    <view >
+      <textarea placeholder="备注" placeholder-class="holder" bindinput="onTextAreaInput"></textarea>
+    </view>
+
+  </view>
+  
+  <view  class="foot">
+
+</view>
+  
+</view>
+<button bindtap='buttonClick'>确认下单</button>
+
+
+

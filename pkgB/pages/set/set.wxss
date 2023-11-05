@@ -1,0 +1,29 @@
+/* pkgB/pages/set/set.wxss *//* pages/version/version.wxss */
+.container {
+  padding: 20px;
+  background-color: #fff;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20rpx;
+}
+
+.version {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.changelog {
+  font-size: 16px;
+}
+
+.changelog-title {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.changelog-content {
+  margin-left: 10px;
+}

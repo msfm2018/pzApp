@@ -1,0 +1,26 @@
+
+
+page{
+  background-color: #ffffff;
+  font-family: "Helvetica Neue","Hiragino Sans GB","Microsoft YaHei","\9ED1\4F53",Arial,sans-serif;
+  font-size: 16px;
+}
+
+
+.navigator-hover{
+  background: none;
+}
+.form-box{
+    padding-left: 30rpx;
+}
+.form-box input{
+    height: 90rpx;
+    border-bottom: 1rpx solid #ededed;
+    color: #999;
+}
+.form-box .input-placeholder{
+    color: #aaa;
+}
+.form-box button{
+    margin:30rpx 30rpx 0 0;
+}

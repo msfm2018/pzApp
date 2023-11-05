@@ -1,0 +1,109 @@
+/* pkgC/base/index.wxss */
+
+.content{
+  width: 90%;
+  margin: 20rpx;
+}
+.register-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20rpx;
+}
+.hr{
+   padding-top: 20px;
+   }
+.form-group {
+  width: 100%;
+  /* margin-bottom: 1rpx; */
+}
+
+
+
+/* input, */
+textarea {
+  width: 100%;
+  /* height: 40rpx; */
+  border: 1px solid #ccc;
+  border-radius: 5rpx;
+  padding: 0 10rpx;
+}
+
+.radio-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  margin-right: 20rpx;
+}
+
+.radio-label radio {
+  margin-right: 5rpx;
+}
+
+.register-button {
+  background-color: #3498db;
+  color: #fff;
+  padding: 10rpx 20rpx;
+  border-radius: 5rpx;
+  cursor: pointer;
+  /* font-size: 16rpx; */
+  width: 90%;
+   color: #999999;
+   /* margin-top: 40px; */
+}
+.tui-menu-item {
+  margin-right: 16rpx;
+  margin-left: 6rpx; 
+}
+.item{
+     margin: 0 auto;
+     border: 1px solid #cccccc;
+     height: 100rpx;
+     width: 100%;
+     border-radius: 16rpx;
+     background-color: #ffffff;
+     margin-bottom: 15px; 
+     margin-top: 10rpx;
+     line-height: 100rpx;
+   }
+   .item input{
+     height: 100rpx;
+     line-height: 40px;
+     margin-left: 10px; 
+   }
+   .holder{
+       font-size: 14px;
+       color: #999999;
+     }
+
+     .flex-container {
+      display: inline-flex; /* 将子元素水平排列 */
+      align-items: center;
+    }
+
+
+
+    
+.xieyi {
+  margin-top: 15px;
+  margin-left: 15px;
+  margin-bottom: 30rpx;
+}
+.links {
+  margin-top: 10rpx;
+  display: flex;
+  align-items: center;
+}
+.agree-text {
+  margin-left: 5rpx; /* 设置 "同意" 文本与选择框之间的间距 */
+}
+.opinion {
+  font-size: 13px;
+  color: #000;
+  font-weight: bold;
+}

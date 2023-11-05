@@ -1,0 +1,148 @@
+
+
+
+
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10rpx;
+  background-color: #fff;
+  margin: 5rpx 0;
+  transition: transform 0.3s ease;
+  /* overflow: hidden; */
+
+}
+
+.list-item:hover .delete-btn {
+  transform: translateX(0);
+}
+
+.delete-btn {
+  width: 80rpx;
+  height: 100%;
+  background-color: #ff0000;
+  color: #fff;
+  text-align: center;
+  line-height: 80rpx;
+  transform: translateX(80rpx);
+  transition: transform 0.3s ease;
+  border-radius: 50%;
+}
+
+
+
+
+
+
+.content_ {
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 160rpx;
+}
+
+.title {
+  width: 94%;
+  line-height: 30px;
+  display: flex;
+  justify-content: space-between;
+  /* border-bottom: 1px solid #f5f8f4; */
+  padding: 0 3%;
+}
+
+.title>view {
+  color: #666;
+}
+
+.title>text {
+  color: #fa9b4e;
+}
+
+.bottom-title {
+  width: 96%;
+  text-align: right;
+  line-height: 40px;
+  background-color: #fff;
+  padding: 0 2%;
+  border: 2rpx solid #f5f5f5;
+}
+
+.card {
+  width: 100%;
+  height: 300rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+
+
+.card-text {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 30rpx;
+}
+
+
+
+.card-text_>text {
+
+  color: #444;
+  font-weight: 600;
+  font-size: 10pt;
+}
+
+.card-text_>view {
+  padding-right: 20rpx;
+  width: 20%;
+  text-align: right;
+}
+
+.card-text_>view>view {
+  color: #444;
+  font-weight: 600;
+  margin-bottom: 10rpx;
+}
+
+.card-text_>view>text {
+  font-size: 9pt;
+  color: #999;
+}
+
+.card-button {
+  width: 98%;
+  line-height: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding: 20rpx 2%;
+  background: #fff;
+}
+
+.card-button>view {
+  background-color: #fff;
+  line-height: 25px;
+  width: 30%;
+  margin-left: 10rpx;
+  text-align: center;
+  border-radius: 15px;
+  border: 1px solid#d6d6d6;
+  color: #444;
+  font-size: 9pt;
+}
+
+
+.foot {
+  height: 100px;
+} 
+
+.centered-text {
+  display: flex;
+  justify-content: center; /* 水平居中 */
+  align-items: center; /* 垂直居中 */
+  text-align: center; /* 如果文本需要在其内部居中 */
+  height: 100vh; /* 使用视口高度，使容器占满整个屏幕 */
+  background-color: #fff;
+}

@@ -1,0 +1,77 @@
+/* pages/about/contact.wxss */
+
+.header-box {
+  padding-right: 32rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #333;
+}
+.header-box-left {
+  display: flex;
+  align-items: center;
+}
+.header-box .avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+.header-box .avatar-img {
+  width: 128rpx;
+  height: 128rpx;
+  margin-left: -30rpx;
+}
+.header-box .btn {
+  margin-left: 32rpx;
+}
+.header-box .r {
+  margin-left: 32rpx;
+}
+
+
+.container {
+  padding: 40rpx;
+  background:#fff ;
+}
+
+.title {
+  font-size: 18px;
+  margin-bottom: 20rpx;
+  color: #999999;
+}
+
+.cell {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.cell-title {
+  font-size: 16px;
+}
+
+.cell-arrow {
+  font-size: 16px;
+  color: #007AFF;
+}
+.with-border1 {
+  border-bottom: 1px solid #f5f5f5;
+}
+
+
+
+button[plain]{ 
+  border:0 ;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+
+button::after{
+  border: none;
+}

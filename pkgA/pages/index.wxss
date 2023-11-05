@@ -1,0 +1,60 @@
+
+.img{
+  width: 100%;
+  height: 410rpx;
+}
+
+
+.grid-container {
+  background-color: #fff; /* 元素的背景颜色 */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+  border-radius: 16rpx;
+  display: grid;
+  grid-template-columns:  1fr auto; 
+  align-items: center; 
+  gap: 10rpx;
+  padding: 10rpx; 
+  margin: 16rpx;
+}
+
+.avatar {
+  width: 80rpx; 
+  height: 80rpx; 
+  border-radius: 50%; 
+}
+
+
+.middle_body{
+  display: grid;
+  grid-template-columns: 1fr; 
+  grid-template-rows: repeat(3, auto); 
+  gap: 10rpx; 
+  padding: 10rpx; 
+  /* border: 1px solid red; */
+}
+
+.grid-item {
+  display: flex;
+  align-items: center; /* 垂直居中对齐 */
+  justify-content: start; /* 水平居中对齐 */
+}
+
+.title{
+  font-size: 18px;
+  /* color: cornflowerblue; */
+  font-size: 25px;   
+  color: red;
+  
+  font-family: Cursive;   /**字体类型**/
+}
+.titlebody{
+  font-size: 16px;
+  color: black;
+  font-family: Cursive;   
+}
+ .arrow {
+  width: 40rpx; 
+  height: 40rpx; 
+} 
+
+
