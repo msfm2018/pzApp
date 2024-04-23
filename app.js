@@ -1,5 +1,6 @@
-
-import { promisifyAll} from 'miniprogram-api-promise'
+import {
+  promisifyAll
+} from 'miniprogram-api-promise'
 
 const wxp = wx.p = {}
 promisifyAll(wx, wxp)
@@ -25,14 +26,14 @@ App({
       success(res) {
         const networkType = res.networkType
         if (networkType === 'none') {
-          that.globalData.netStatus=false;
+          that.globalData.netStatus = false;
           wx.showToast({
             title: '当前无网络',
             icon: 'loading',
             duration: 2000
           })
         } else {
-          that.globalData.netStatus=true;
+          that.globalData.netStatus = true;
         }
       }
     });
@@ -56,11 +57,34 @@ App({
       }
     })
   },
+  changeGlobalData(data) {
+    this.globalData = Object.assign({}, this.globalData, data);
+    listeners.forEach((listener) => {
+      listener(this.globalData);
+    });
+  },
+  watchGlobalDataChanged(listener) {
+    if (listeners.indexOf(listener) < 0) {
+      listeners.push(listener);
+    }
+  },
+  unWatchGlobalDataChanged(listener) {
+    const index = listeners.indexOf(listener);
+    if (index > -1) {
+      listeners.splice(index, 1);
+    }
+  },
+  onThemeChange(resp) {
+    this.changeGlobalData({
+      theme: resp.theme,
+    });
+  },
   globalData: {
     token: '',
     nickName: '',
     avatarUrl: '',
-    netStatus:true,
-
+    netStatus: true,
+    theme: 'light', // dark
+    mode: '', // 模式(care：关怀模式)
   }
 })

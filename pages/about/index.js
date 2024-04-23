@@ -33,14 +33,14 @@ Page({
     
     if (app.globalData.token) {
       this.setData({
-    
+        show:app.globalData.show,
         userid: app.globalData.userid,
         nick:app.globalData.nickName ,       
         isLogged: true
       })
     } else {
       this.setData({
-   
+        show:false,
         userid: "",
         nick:"",
         isLogged: false

@@ -144,5 +144,6 @@
   align-items: center; /* 垂直居中 */
   text-align: center; /* 如果文本需要在其内部居中 */
   height: 100vh; /* 使用视口高度，使容器占满整个屏幕 */
-  background-color: #fff;
+  /* background-color: #fff; */
+  background-color: #f6f0e3;
 }

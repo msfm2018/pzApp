@@ -1,19 +1,29 @@
 /* 在 wxss 文件中 */
+.weui-bottom-fixed-opr-demo{padding:32px 32px 0}
 .container {
+  text-align: center;
+  font-size: 34rpx;
+  height: 38rpx;
+  line-height: 38rpx;
+  margin-top: 50rpx;
+  margin-bottom: 20rpx;
+}
+.img {
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  /* padding: 20rpx; */
   justify-content: space-between;
   align-items: center;
 }
-
 .title {
   margin-bottom: 20rpx;
   font-size: 18px;
   margin-right: 40rpx;
   font-family: 'Courier New', Courier, monospace;
 }
-
+.top{
+  margin-bottom: 40rpx;
+}
 .text {
   font-family: 'Times New Roman', Times, serif;
   font-size: 16px;
@@ -31,4 +41,4 @@ button {
   text-align: center;
   font-family: 'Courier New', Courier, monospace;
 }
-
+.page__desc{margin-top:5px;color:var(--weui-FG-1);text-align:left;font-size:0.8235294117647058rem}

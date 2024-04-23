@@ -39,7 +39,7 @@ text{
   display: flex;
   justify-content: space-between;
   width: 100%;
-  background-color: #fff;
+  /* background-color: #fff; */
   border-bottom: 1px solid #ccc;
 }
 

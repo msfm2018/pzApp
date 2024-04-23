@@ -23,7 +23,7 @@ export function getToken() {
             } else {
               let jsonData = JSON.parse(json.data.data);
 
-              //返回数据格式 {session_key: "Ve/KrjP5EUNReZZ69vVPmw==", openid: "olrr74qOhuSv1AeAtSqNvu3xZhO0"}
+              //返回数据格式 {session_key: "Ve/KrjP5EUNReZZPmw==", openid: "olrr74qOhuSv1AeAtSqNvu3O0"}
               wx.setStorageSync("token", jsonData.openid);
               app.globalData.token = jsonData.openid;
               app.globalData.userid = json.data.maxid;

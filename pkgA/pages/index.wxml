@@ -1,27 +1,27 @@
-<view>
-  <image class="img" src="https://xbzx.online/aaimg/img.png" mode="aspectFit" />
-</view>
+<page-meta root-font-size="system" />
+<view class="page ">
+  <view class="page__hd ">
 
-<view class="grid-container" wx:for="{{dataList}}" wx:key="id" bindtap="tapBanner" data-item="{{item}}">
-
-  <view class="middle_body">
-    <view class="grid-item">
-      <text class="title">{{item.n1}}</text>
+    <view>
+      <image class="img" src="https://xbzx.online/aaimg/img.png" mode="aspectFit" />
     </view>
 
-    <view class="grid-item">
-      <text class="titlebody">{{item.n2}}</text>
+    <view wx:for="{{dataList}}" wx:key="id" bindtap="tapBanner" data-item="{{item}}">
+      <view class="weui-panel bg">
+        <view class="weui-panel__bd">
+          <view aria-labelledby="js_p4m1_title js_a11y_comma js_p4m1_desc" aria-describedby="js_p4m1_source js_a11y_comma js_p4m1_time js_a11y_comma js_p4m1_extra" class="weui-media-box weui-media-box_text" aria-role="link">
+            <text aria-hidden="true" class="weui-media-box__title" id="js_p4m1_title">{{item.n1}}</text>
+            <view class="weui-media-box__desc" aria-hidden="true" id="js_p4m1_desc">{{item.n3}}</view>
+            <view class="weui-media-box__info" aria-hidden="true">
+              <view class="weui-media-box__info__meta" aria-hidden="true" id="js_p4m1_source">{{item.n2}}</view>
+            </view>
+          </view>
+        </view>
+      </view>
     </view>
-    <view class="grid-item">
-      <text class="titlebody">{{item.n3}}</text>
-    </view>
+    
   </view>
 
-  <image src="../../images/right.png" class="arrow"></image>
-
-
-
+  <view class="page__ft">
+  </view>
 </view>
-<view class="foot">
-</view>
-

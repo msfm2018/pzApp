@@ -1,15 +1,21 @@
 /**app.wxss**/
-page {
+@import "./weui/weui.wxss";
+/* @import "./weui/app.wxss"; */
 
-  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica,
-    Segoe UI, Arial, Roboto, 'PingFang SC', 'miui', 'Hiragino Sans GB', 'Microsoft Yahei', sans-serif;
-    font-size: 14px;
-    /* font-family: Cursive;    */
-    font-family: -apple-system-font,Helvetica Neue,Helvetica,sans-serif;
-    line-height: 1.6; 
-
-
+ .page {
+  background-color: #f6f0e3;
+  min-height: 100vh;
+  box-sizing: border-box;
 }
-.foot {
-  height: 100px;
+.bg{
+  background-color: #f6f0e3;
+}
+.page__ft {
+  height: 200rpx;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  padding-bottom: calc(10px ~"+ constant(safe-area-inset-bottom)");
+  padding-bottom: calc(10px ~"+ env(safe-area-inset-bottom)");
+  text-align: center;
+
 }

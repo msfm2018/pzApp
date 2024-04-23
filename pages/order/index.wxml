@@ -1,5 +1,7 @@
-<view class="order">
-  <block wx:if="{{dataList.length > 0}}">
+<view class="page">
+  <view class="page__bd ">
+<view class="order ">
+  <view  wx:if="{{dataList.length > 0}}">
     <block wx:for="{{dataList}}" wx:for-index="index" wx:key="id">
       <view class="list-item" bindtouchstart="handleTouchStart" bindtouchmove="handleTouchMove" bindtouchend="handleTouchEnd" data-index="{{index}} " style="transform: translateX({{item.translateX || 0}}px)">
         <view class="content_">
@@ -30,12 +32,14 @@
         <view class="delete-btn" data-index="{{index}}" data-orderid="{{item.orderid}}" bindtap="showDeleteConfirmation">删除</view>
       </view>
     </block>
-  </block>
+  </view>
   <block wx:else>
     <view class="centered-text">暂无数据</view>
   </block>
 </view>
 
-<view class="foot">
-  <text></text>
+<view class="page__ft">
+
 </view>
+  </view>
+  </view>

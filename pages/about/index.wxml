@@ -1,52 +1,53 @@
 <!--pages/contact/contact.wxml-->
+<page-meta root-font-size="system" />
+<view class="page" data-weui-theme="{{theme}}" data-weui-mode="{{mode}}">
+  <view class="page__hd">
+
+    <view class="header-box">
+      <view class="header-box-left">
+        <button class="avatar" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">
+          <image class="avatar-img" src="{{ avatarUrl ? avatarUrl : '/images/default.png' }}" mode="aspectFill"></image>
+        </button>
+        <view class="r">
+          <view class="uid">用户ID: {{ userid }}</view>
+          <view class="nick" bindtap="editNick">{{ nick ? nick : '昵称:暂无' }}</view>
+        </view>
+      </view>
+
+    </view>
+
+    <!-- <button  bindtap="loginOut">测试时使用退出</button> -->
 
 
-<view class="header-box">
-  <view class="header-box-left">
-    <button class="avatar" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">
-      <image class="avatar-img" src="{{ avatarUrl ? avatarUrl : '/images/default.png' }}" mode="aspectFill"></image>
-    </button>
-    <view class="r">
-      <view class="uid">用户ID: {{ userid }}</view>
-      <view class="nick" bindtap="editNick">{{ nick ? nick : '昵称:暂无' }}</view>
+
+    <view class="weui-cells__title">常用功能</view>
+    <view class="weui-cells weui-cells_after-title bg">
+      <navigator aria-labelledby="js_cell_l1_bd" class="weui-cell weui-cell_access" hover-class="weui-cell_active" url="/pages/about/info">
+        <view class="weui-cell__bd" id="js_cell_l1_bd" aria-hidden="true">
+          <view>个人信息</view>
+        </view>
+        <view class="weui-cell__ft weui-cell__ft_in-access" aria-hidden="true"></view>
+      </navigator>
+      <navigator url="/pkgB/pages/set/set" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <view class="weui-cell__bd">
+          <view>系统设置</view>
+        </view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </navigator>
+    </view>
+
+    <view class="weui-cells__title">其它功能</view>
+    <view class="weui-cells weui-cells_after-title bg">
+      <navigator aria-labelledby="js_cell_l1_bd" class="weui-cell weui-cell_access" hover-class="weui-cell_active" url="/pages/about/info">
+        <view class="weui-cell__bd" id="js_cell_l1_bd" aria-hidden="true">
+          <button plain="true" open-type="contact" class="cell with-border ">联系客服
+          </button>
+        </view>
+        <view class="weui-cell__ft weui-cell__ft_in-access" aria-hidden="true"></view>
+      </navigator>
+
     </view>
   </view>
-
+  <view class="page__ft">
+  </view>
 </view>
-
-<!-- <button  bindtap="loginOut">测试时使用退出</button> -->
-
-
-
-<view class="container">
-  <view class="title">常用功能</view>
-  <navigator url="/pages/about/info" class="cell with-border">
-    <text class="cell-title">个人信息</text>
-    <text class="cell-arrow">></text>
-  </navigator>
-  <navigator url="/pkgB/pages/set/set" class="cell with-border">
-    <text class="cell-title">系统设置</text>
-    <text class="cell-arrow">></text>
-  </navigator>
-
-  <view class="title">其他功能</view>
-  <button plain="true" open-type="contact" class="cell with-border ">
-    <text class="cell-title">联系客服</text>
-    <text class="cell-arrow">></text>
-  </button>
-
-  <!-- <button plain="true" hidden="{{!show}}" catchtap="toCall" class="cell with-border ">
-    <text class="cell-title">电话客服</text>
-    <text class="cell-arrow">></text>
-  
-  </button> -->
-
-  <!-- <navigator  class="cell with-border"> -->
-    <!-- <text class="cell-title">退出系统</text> -->
-    <!-- <view bind:tap="exit">返回登录</view> -->
-    <!-- <text class="cell-arrow">></text> -->
-  <!-- </navigator> -->
-
-</view>
-
-

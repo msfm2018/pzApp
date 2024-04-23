@@ -9,6 +9,7 @@ Page({
       url: '/pages/login/login',
     })
   },
+  // 下单页面
   leftButtonTapped: function () {
     wx.switchTab({
       url: '/pages/home/index',

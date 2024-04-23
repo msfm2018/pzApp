@@ -1,24 +1,29 @@
-<!-- 在 wxml 文件中 -->
-<view class="container">
+<page-meta root-font-size="system"/>
 
-  <view class="title">{{title}}</view>
-  <view class="text">{{content}}</view>
+<view class="page" data-weui-theme="{{theme}}" data-weui-mode="{{mode}}">
+	<view class="weui-bottom-fixed-opr-page  {{wrap ? 'weui-bottom-fixed-opr-page_btn-wrap' : ''}}">
+		<view class="weui-bottom-fixed-opr-page__content">
+			<view class="weui-bottom-fixed-opr-demo">      {{content}} </view>
+		</view>
 
-  <view wx:if="{{id==4}}">
-    <image mode="aspectFit" src="https://xbzx.online/allimg/1.jpg"></image>
-    <image mode="aspectFit" src="https://xbzx.online/allimg/2.jpg"></image>
-    <image mode="aspectFit" src="https://xbzx.online/allimg/3.jpg"></image>
-    <image mode="aspectFit" src="https://xbzx.online/allimg/4.jpg"></image>
-    <image mode="aspectFit" src="https://xbzx.online/allimg/5.jpg"></image>
-  </view>
-  <view wx:else>
-    <image mode="aspectFit" src="{{url}}"></image>
-  </view>
+    <view class="img" wx:if="{{id==4}}">
+      <image mode="aspectFit" src="https://xbzx.online/allimg/1.jpg"></image>
+      <image mode="aspectFit" src="https://xbzx.online/allimg/2.jpg"></image>
+      <image mode="aspectFit" src="https://xbzx.online/allimg/3.jpg"></image>
+      <image mode="aspectFit" src="https://xbzx.online/allimg/4.jpg"></image>
+      <image mode="aspectFit" src="https://xbzx.online/allimg/5.jpg"></image>
+    </view>
+    <view class="img" wx:else>
+      <image mode="aspectFit" src="{{url}}"></image>
+    </view>
 
-  <button bindtap="onClick">预约</button>
+		<view class="weui-bottom-fixed-opr-page__tool">
+    
+      <view class="weui-bottom-fixed-opr">
+        <button class="weui-btn weui-btn_primary" aria-role="button" bindtap="onClick">预约</button>
   
-  <view class="foot">
-  </view>
+      </view>
+		</view>
+	</view>
 </view>
-
 

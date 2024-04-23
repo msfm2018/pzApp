@@ -19,6 +19,7 @@ Page({
       url: 'https://api.xbzx.online:9011/api_swiper',
       method: 'GET',
       success: (res) => {
+        console.log(res.data.data);
         this.setData({
           swiperList: res.data.data
         })
@@ -27,7 +28,7 @@ Page({
   },
 
   //功能点击
-  categoryClick(e) {
+  gridClick(e) {
     let v = e.currentTarget.dataset.item;
     wx.navigateTo({
       url: '/pkgA/pages/doc/desc?id=' + v.id + '&title=' + v.title + '&content=' + v.content + '&url=' + v.url + '&price=' + v.price

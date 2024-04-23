@@ -38,17 +38,20 @@
   },
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "小毛驴助医",
     "navigationBarTextStyle": "black",
-    "onReachBottomDistance": 50
+    "onReachBottomDistance": 50,
+    "backgroundColor": "#f6f0e3",
+    "navigationBarBackgroundColor": "#f6f0e3", 
+    
+    "navigationStyle": "default"
   },
   "注释编译错误": "https://developers.weixin.qq.com/community/develop/doc/00044a99644748f4277f5b74553c00",
   "tabBar": {
     "color": "#6e6d6b",
     "selectedColor": "#e64340",
     "borderStyle": "white",
-    "backgroundColor": "#fff",
+    "backgroundColor": "#f6f0e3",
     "list": [
       {
         "pagePath": "pages/home/index",
@@ -79,6 +82,9 @@
     "scope.userLocation": {
       "desc": "获取最近的商家"
     }
+  },
+  "useExtendedLib": { 
+    "weui": true
   },
   "usingComponents": {},
   "lazyCodeLoading": "requiredComponents",

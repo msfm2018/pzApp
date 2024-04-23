@@ -1,45 +1,43 @@
 <!-- 定位 -->
+<page-meta root-font-size="system" />
+<view class="page">
 
-<view class='setting'>
-  <image src="{{imageUrl}}" class="rotate-image" ></image>
-  <text class="locate">北京</text>
-</view>
+  <view class="page__bd ">
 
-<!--轮播图-->
-<view class="swiper-container" bindtap="swiperClick">
-  <swiper class="swiper1" indicator-dots="true" indicator-active-color="#fff" autoplay circular>
-    <swiper-item wx:for="{{swiperList}}" wx:key="id">
-      <image  src="{{item.picUrl}}" />
-    </swiper-item>
-  </swiper>
-
-  <view class="swiper2">
-    <swiper class="swiper21" autoplay circular vertical>
-      <navigator wx:for="{{swiperList}}" wx:key="id">
-        <swiper-item>
-          <view class="swiper2-item">
-            <image mode="aspectFill" src="{{item.picUrl}}"></image>
-            <text> {{item.tip}}</text>
-          </view>
+    <!--轮播图-->
+    <view class="swiper-container" bindtap="swiperClick">
+      <swiper class="swiper-box" indicator-dots="true" indicator-active-color="#fff" autoplay circular>
+        <swiper-item wx:for="{{swiperList}}" wx:key="id">
+          <image src="{{item.picUrl}}" />
         </swiper-item>
-      </navigator>
-    </swiper>
+      </swiper>
+
+      <view class="swiper-tip-container">
+        <swiper class="swiper-tip-box" autoplay circular vertical>
+          <navigator wx:for="{{swiperList}}" wx:key="id">
+            <swiper-item>
+              <view class="swiper-tip-item">
+                <image mode="aspectFill" src="{{item.picUrl}}"></image>
+                <text> {{item.tip}}</text>
+              </view>
+            </swiper-item>
+          </navigator>
+        </swiper>
+      </view>
+    </view>
+
+    <view class='recommend-title '>服务介绍</view>
+
+    <view class="grid-container ">
+      <view class="grid-box" wx:for="{{gridList}}" wx:key="id">
+        <view bindtap="gridClick" data-item="{{item}}" data-id="{{item.id}}">
+          <image mode="aspectFill" class="grid-img" src="{{item.icon}}"></image>
+          <view class=" page__title">{{item.name}}</view>    
+        </view>
+      </view>
+    </view>
+
   </view>
+
+  <view class='page__ft'></view>
 </view>
-
-
-<!-- 大标题栏 -->
-<view class="category-box">
-  <view class="category-list" wx:for="{{gridList}}" wx:key="id">
-    <view bindtap="categoryClick" data-item="{{item}}" data-id="{{item.id}}" >
-      <image mode="aspectFill" class="category-img" src="{{item.icon}}"></image>
-      <view class="category-title">{{item.name}}</view>
-    </view>  
-  </view>
-</view>
-
-<view class="foot">
-  <text></text>
-</view>
-
-
