@@ -1,35 +1,47 @@
-<view class="page">
-  <view class="page__bd ">
+<page-meta root-font-size="system"/>
+<view class="page" data-weui-theme="{{theme}}" data-weui-mode="{{mode}}">
+	<view class="page__hd">
 <view class="order ">
-  <view  wx:if="{{dataList.length > 0}}">
+  <view class="page mheight"  wx:if="{{dataList.length > 0}}">
     <block wx:for="{{dataList}}" wx:for-index="index" wx:key="id">
-      <view class="list-item" bindtouchstart="handleTouchStart" bindtouchmove="handleTouchMove" bindtouchend="handleTouchEnd" data-index="{{index}} " style="transform: translateX({{item.translateX || 0}}px)">
-        <view class="content_">
-          <view class="title">
-            <view>订单编号：{{item.orderid}}</view>
-            <view wx:if="{{item.order_state==0}}">派单中</view>
-            <view wx:elif="{{item.order_state==2}}">服务完成</view>
-            <view wx:else> 服务进行中</view>
-            <!-- <view wx:if="{{item.order_state}}=='0'">派单中</view>
-            <view wx:else> 派单完成</view>            -->
-          </view>
-          <view class="card">
-            <view class="card-text">
-              <text style="font-weight: bold;font-size: 18px;margin-top: 10rpx;margin-bottom: 10rpx;">{{item.servicename}}</text>
-              <text>姓名：{{item.name}}</text>
-              <text>医院：{{item.hospital}}</text>
-              <text>诊室：{{item.department}}</text>
-              <text>时间：{{item.orderdate}}</text>
-              <!-- <text>手机：{{item.phone}}</text> -->
-              <text>备注：{{item.other}}</text>
-              <text>接单人姓名：{{item.companion_name}}</text>
-              <text>接单人电话：{{item.companion_phone}}</text>
-            </view>
-          </view>
-        </view>
+      <view class="list-item page" bindtouchstart="handleTouchStart" bindtouchmove="handleTouchMove" bindtouchend="handleTouchEnd" data-index="{{index}} " style="transform: translateX({{item.translateX || 0}}px)"  data-orderid="{{item.orderid}}" bindtap="showDeleteConfirmation">
 
-        <text>{{item.text}}</text>
-        <view class="delete-btn" data-index="{{index}}" data-orderid="{{item.orderid}}" bindtap="showDeleteConfirmation">删除</view>
+        <view class="weui-panel">
+			<view class="weui-panel__hd">{{item.servicename}}
+      </view>
+			<view class="weui-panel__bd">
+				<view aria-labelledby="js_p4m1_title js_a11y_comma js_p4m1_desc" aria-describedby="js_p4m1_source js_a11y_comma js_p4m1_time js_a11y_comma js_p4m1_extra" class="weui-media-box weui-media-box_text" aria-role="link" >
+					<!-- <text aria-hidden="true" class="weui-media-box__title" id="js_p4m1_title">{{item.servicename}}</text> -->
+					<view class="weui-media-box__desc" aria-hidden="true" id="js_p4m1_desc">
+            <text>姓名：{{item.name}}</text>
+             
+          </view>
+          <view class="weui-media-box__desc" aria-hidden="true" id="js_p4m1_desc">
+          
+              <text> 医院：{{item.hospital}}</text>
+              <text> 诊室：{{item.department}}</text>
+              <text> 时间：{{item.orderdate}}</text>
+          </view>
+          
+          <view class="weui-media-box__desc" aria-hidden="true" id="js_p4m1_desc">
+              <text> 备注：{{item.other}}</text>
+          </view>
+          <view class="weui-media-box__desc" aria-hidden="true" id="js_p4m1_desc">
+              <text> 接单人姓名：{{item.companion_name}}</text>
+              <text> 接单人电话：{{item.companion_phone}}</text>
+          </view>
+					<view class="weui-media-box__info" aria-hidden="true">
+						<view class="weui-media-box__info__meta" aria-hidden="true" id="js_p4m1_source">订单编号:{{item.orderid}}</view>
+						 <view class="weui-media-box__info__meta" aria-hidden="true" id="js_p4m1_time">  <block wx:if="{{item.order_state==0}}">派单中</block>
+            <block wx:elif="{{item.order_state==2}}">服务完成</block>
+            <block wx:else> 服务进行中</block></view>
+						<!-- <view class="weui-media-box__info__meta weui-media-box__info__meta_extra" aria-hidden="true" id="js_p4m1_extra">其它信息</view>  -->
+					</view>
+				</view>
+			</view>
+		</view>
+
+
       </view>
     </block>
   </view>

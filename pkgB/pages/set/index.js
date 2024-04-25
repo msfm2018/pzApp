@@ -1,11 +1,15 @@
-// pkgB/pages/about/info.js
+// pkgB/pages/set/index.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    version: '1.0.0',
+    changelog: [
+      '新增功能A',
+      '修复了Bug B',
+    ],
   },
 
   /**

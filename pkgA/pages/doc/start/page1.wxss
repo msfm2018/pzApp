@@ -1,3 +1,7 @@
+.weui-vcode-img{width:108px}
+.mp{
+  margin: 30rpx;
+}
 .item{
   margin: 0 auto;
   border: 1px solid #cccccc;

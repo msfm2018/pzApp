@@ -2,27 +2,29 @@
 # yarn lockfile v1
 
 
-crypto-js@^4.1.1:
-  version "4.1.1"
-  resolved "https://registry.npmjs.org/crypto-js/-/crypto-js-4.1.1.tgz"
-  integrity sha512-o2JlM7ydqd3Qk9CA0L4NL6mTzU2sdx96a+oOfPu8Mkl/PK51vSyoi8/rQ8NknZtk44vq15lmhAj9CIAGwgeWKw==
+"@types/wechat-miniprogram@^3.4.0":
+  version "3.4.7"
+  resolved "https://registry.npmmirror.com/@types/wechat-miniprogram/-/wechat-miniprogram-3.4.7.tgz#6cc794bb3ca1deb09e0442a3a871b2603e454276"
+  integrity sha512-X6SVOOaTPQN24lYBSV5jLuWyIedx8DGJnT0VUBnoNzJruhxotCL28ecGb7AO5JfXOXtHqSS5+CnJ70NxFxmisA==
+
+crypto-js@^4.2.0:
+  version "4.2.0"
+  resolved "https://registry.npmmirror.com/crypto-js/-/crypto-js-4.2.0.tgz#4d931639ecdfd12ff80e8186dba6af2c2e856631"
+  integrity sha512-KALDyEYgpY+Rlob/iriUtjV6d5Eq+Y191A5g4UqLAi8CyGP9N1+FdVbkc1SxKc2r4YAYqG8JzO2KGL+AizD70Q==
 
 miniprogram-api-promise@^1.0.4:
   version "1.0.4"
-  resolved "https://registry.npmjs.org/miniprogram-api-promise/-/miniprogram-api-promise-1.0.4.tgz"
+  resolved "https://registry.npmmirror.com/miniprogram-api-promise/-/miniprogram-api-promise-1.0.4.tgz#fefe9b72923fd31f88b12463b502cb457c892b4c"
   integrity sha512-lS2ukj03Ugy8IJUDmdssklLT4kjzyRtVYwErhyDZkzxtqcxaed2xldRgNrsikigeMUBR9gAs7wgnjSKPlyKIYg==
 
-mobx-miniprogram-bindings@^1.2.1:
-  version "1.2.1"
-  resolved "https://registry.npmjs.org/mobx-miniprogram-bindings/-/mobx-miniprogram-bindings-1.2.1.tgz"
-  integrity sha512-OleJ0IIc4g8rC7ul0wtn+imapVQvWo/1UxZyvdMrfwcenmHBjY4Bddr90RoIwkM+Ul7nOxsYdsmOsB/mZ0PJmA==
+mobx-miniprogram-bindings@^2.1.5:
+  version "2.1.5"
+  resolved "https://registry.npmmirror.com/mobx-miniprogram-bindings/-/mobx-miniprogram-bindings-2.1.5.tgz#148a9e9bb47b7ef2b4bdc3786dff57666e33a2eb"
+  integrity sha512-2HuiQL5FPgoYJ8XIMdw5iD6XT61LtsujaGyizbN845iZcsLmrKZiF0dKd4jQTSuC/6rGozqqhcy0sDc7qcpjYQ==
+  dependencies:
+    "@types/wechat-miniprogram" "^3.4.0"
 
-mobx-miniprogram@^4.0.0, mobx-miniprogram@^4.13.2:
+mobx-miniprogram@^4.13.2:
   version "4.13.2"
-  resolved "https://registry.npmjs.org/mobx-miniprogram/-/mobx-miniprogram-4.13.2.tgz"
+  resolved "https://registry.npmmirror.com/mobx-miniprogram/-/mobx-miniprogram-4.13.2.tgz#b72c03fd5ad1f1b9022c422f9c88a47d1e5f8868"
   integrity sha512-C3HtkqHCLKp35N2gXA80yFD6PNfSqwioPFmnjTQpBLrEqYm1F6yiWZ57CW+8FqgmR306mw6ZfsM5q7hSTHw8BQ==
-
-weui-wxss@^2.6.12:
-  version "2.6.12"
-  resolved "https://registry.npmjs.org/weui-wxss/-/weui-wxss-2.6.12.tgz"
-  integrity sha512-wNhe75eAUXzRRmz8VH2vsKmLIk7SBZTiwyqVh42lSH8+neKCuPANsw8ylerK/q/bVOyLvitQOIdabCGkLZNkrw==

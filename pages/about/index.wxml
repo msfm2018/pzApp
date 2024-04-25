@@ -1,6 +1,6 @@
 <!--pages/contact/contact.wxml-->
 <page-meta root-font-size="system" />
-<view class="page" data-weui-theme="{{theme}}" data-weui-mode="{{mode}}">
+<view class="page mheight" data-weui-theme="{{theme}}" data-weui-mode="{{mode}}">
   <view class="page__hd">
 
     <view class="header-box">
@@ -18,17 +18,15 @@
 
     <!-- <button  bindtap="loginOut">测试时使用退出</button> -->
 
-
-
     <view class="weui-cells__title">常用功能</view>
-    <view class="weui-cells weui-cells_after-title bg">
-      <navigator aria-labelledby="js_cell_l1_bd" class="weui-cell weui-cell_access" hover-class="weui-cell_active" url="/pages/about/info">
+    <view class="weui-cells weui-cells_after-title page">
+      <navigator url="/pkgB/pages/person/index" aria-labelledby="js_cell_l1_bd" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
         <view class="weui-cell__bd" id="js_cell_l1_bd" aria-hidden="true">
           <view>个人信息</view>
         </view>
         <view class="weui-cell__ft weui-cell__ft_in-access" aria-hidden="true"></view>
       </navigator>
-      <navigator url="/pkgB/pages/set/set" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+      <navigator url="/pkgB/pages/set/index" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
         <view class="weui-cell__bd">
           <view>系统设置</view>
         </view>
@@ -36,17 +34,17 @@
       </navigator>
     </view>
 
-    <view class="weui-cells__title">其它功能</view>
-    <view class="weui-cells weui-cells_after-title bg">
-      <navigator aria-labelledby="js_cell_l1_bd" class="weui-cell weui-cell_access" hover-class="weui-cell_active" url="/pages/about/info">
+    <!-- <view class="weui-cells__title">其它功能</view>
+    <view class="weui-cells weui-cells_after-title page">
+      <navigator aria-labelledby="js_cell_l1_bd" class="weui-cell weui-cell_access" hover-class="weui-cell_active" url="">
         <view class="weui-cell__bd" id="js_cell_l1_bd" aria-hidden="true">
           <button plain="true" open-type="contact" class="cell with-border ">联系客服
           </button>
         </view>
         <view class="weui-cell__ft weui-cell__ft_in-access" aria-hidden="true"></view>
       </navigator>
+    </view> -->
 
-    </view>
   </view>
   <view class="page__ft">
   </view>

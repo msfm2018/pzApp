@@ -4,7 +4,7 @@
     "pages/login/login",
     "pages/home/index",
     "pages/about/index",
-    "pages/about/info",
+
     "pages/order/index",
     "pkgC/base/index",
     "pages/companions/index",
@@ -18,13 +18,14 @@
         "pages/index",
         "pages/doc/desc",
         "pages/doc/start/page1"
+        
       ]
     },
     {
       "root": "pkgB",
       "pages": [
-        "pages/set/set",
-        "pages/about/info"
+        "pages/set/index",
+        "pages/person/index"
       ]
     }
   ],
@@ -41,17 +42,16 @@
     "navigationBarTitleText": "小毛驴助医",
     "navigationBarTextStyle": "black",
     "onReachBottomDistance": 50,
-    "backgroundColor": "#f6f0e3",
-    "navigationBarBackgroundColor": "#f6f0e3", 
-    
+    "navigationBarBackgroundColor": "#EDEDED",
+    "backgroundColor": "#EDEDED",
     "navigationStyle": "default"
   },
-  "注释编译错误": "https://developers.weixin.qq.com/community/develop/doc/00044a99644748f4277f5b74553c00",
+
   "tabBar": {
     "color": "#6e6d6b",
     "selectedColor": "#e64340",
     "borderStyle": "white",
-    "backgroundColor": "#f6f0e3",
+    "backgroundColor": "#EDEDED",
     "list": [
       {
         "pagePath": "pages/home/index",

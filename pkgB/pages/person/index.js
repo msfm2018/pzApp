@@ -1,7 +1,7 @@
 // page/component/new-pages/user/address/address.js
 import {
   checkModbile
-} from '../../utils/util'
+} from '../../../utils/util'
 const app = getApp();
 Page({
   data: {

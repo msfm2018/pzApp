@@ -1,5 +1,6 @@
-<page-meta root-font-size="system" />
-<view class="page ">
+<page-meta root-font-size="system"/>
+
+<view class="page" data-weui-theme="{{theme}}" data-weui-mode="{{mode}}">
   <view class="page__hd ">
 
     <view>
@@ -7,7 +8,7 @@
     </view>
 
     <view wx:for="{{dataList}}" wx:key="id" bindtap="tapBanner" data-item="{{item}}">
-      <view class="weui-panel bg">
+      <view class="weui-panel page">
         <view class="weui-panel__bd">
           <view aria-labelledby="js_p4m1_title js_a11y_comma js_p4m1_desc" aria-describedby="js_p4m1_source js_a11y_comma js_p4m1_time js_a11y_comma js_p4m1_extra" class="weui-media-box weui-media-box_text" aria-role="link">
             <text aria-hidden="true" class="weui-media-box__title" id="js_p4m1_title">{{item.n1}}</text>
@@ -19,7 +20,7 @@
         </view>
       </view>
     </view>
-    
+
   </view>
 
   <view class="page__ft">

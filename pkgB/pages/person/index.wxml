@@ -1,0 +1,48 @@
+<page-meta root-font-size="system" />
+
+<view class="page " data-weui-theme="{{theme}}" data-weui-mode="{{mode}}">
+  <view class="weui-form weui-bottom-fixed-opr-page page mheight">
+    <view class="weui-form__bd weui-bottom-fixed-opr-page__content">
+      <!-- <view class="weui-form__text-area">
+        <h2 class="weui-form__title">基础信息</h2>
+      </view> -->
+      <view class="weui-form__control-area ">
+        <view class="weui-cells__group weui-cells__group_form ">
+          <view class="weui-cells weui-cells_form page ">
+            <view class="weui-cell weui-cell_active">
+              <view class="weui-cell__hd"><label class="weui-label">昵称</label></view>
+              <view class="weui-cell__bd">
+                <input name="nick" class="weui-input" type="text" placeholder="昵称" value="{{nick}}" placeholder-class="weui-input__placeholder" />
+              </view>
+            </view>
+
+            <view class="weui-cell weui-cell_active">
+              <view class="weui-cell__hd"><label class="weui-label">手机号</label></view>
+              <view class="weui-cell__bd">
+                <input name="phone" class="weui-input" type="number" placeholder="请输入手机号" value="{{phone}}" placeholder-class="weui-input__placeholder" />
+              </view>
+            </view>
+
+            <view class="weui-cell weui-cell_active">
+              <view class="weui-cell__hd"><label class="weui-label">地址</label></view>
+              <view class="weui-cell__bd weui-flex">
+                <input class="weui-input" name="detail" type="text" placeholder="详细地址" value="{{detail}}" placeholder-class="weui-input__placeholder" />
+              </view>
+            </view>
+          </view>
+
+        </view>
+      </view>
+    </view>
+
+    <button class="weui-btn weui-btn_primary" aria-role="button" bindtap="formSubmit">确定</button>
+    <!-- <view class="weui-bottom-fixed-opr-page__tool "> -->
+      <!-- <view class="weui-bottom-fixed-opr ">
+        <button class="weui-btn weui-btn_primary" aria-role="button" bindtap="formSubmit">确定</button>
+      </view> -->
+    <!-- </view> -->
+
+
+  </view>
+
+</view>

@@ -1,21 +1,20 @@
 /**app.wxss**/
-@import "./weui/weui.wxss";
-/* @import "./weui/app.wxss"; */
+@import "./style/weui.wxss";
 
- .page {
-  background-color: #f6f0e3;
+.page {
+  background-color: var(--weui-BG-0);
+}
+
+.mheight {
   min-height: 100vh;
   box-sizing: border-box;
 }
-.bg{
-  background-color: #f6f0e3;
-}
+
 .page__ft {
   height: 200rpx;
   padding-top: 20px;
   padding-bottom: 10px;
-  padding-bottom: calc(10px ~"+ constant(safe-area-inset-bottom)");
-  padding-bottom: calc(10px ~"+ env(safe-area-inset-bottom)");
+
   text-align: center;
 
 }

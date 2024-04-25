@@ -21,9 +21,9 @@
   "license": "ISC",
   "repository": "https://github.com/msfm2018/pzApp",
   "dependencies": {
-    "crypto-js": "^4.1.1",
+    "crypto-js": "^4.2.0",
     "miniprogram-api-promise": "^1.0.4",
     "mobx-miniprogram": "^4.13.2",
-    "mobx-miniprogram-bindings": "^1.2.1"
+    "mobx-miniprogram-bindings": "^2.1.5"
   }
 }

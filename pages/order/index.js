@@ -2,57 +2,10 @@ const app = getApp();
 Page({
   data: {
     dataList: [],
-    startX: 0, // 初始触摸位置
-    isMoving: false // 是否正在滑动
-  },
-
-  handleTouchStart(e) {
-    this.setData({
-      startX: e.touches[0].clientX,
-      isMoving: false
-    });
-  },
-
-  handleTouchMove(e) {
-    const {
-      startX,
-      isMoving
-    } = this.data;
-    const index = e.currentTarget.dataset.index;
-    const moveX = e.touches[0].clientX;
-
-    if (!isMoving && moveX - startX < -30) {
-      this.setData({
-        isMoving: true
-      });
-    }
-
-    if (isMoving) {
-      const translateX = moveX - startX;
-      const itemList = this.data.dataList;
-      itemList[index].translateX = translateX;
-
-      this.setData({
-        dataList: itemList
-      });
-    }
-  },
-
-  handleTouchEnd(e) {
-    const index = e.currentTarget.dataset.index;
-    const itemList1 = this.data.dataList;
-    itemList1[index].translateX = 0;
-
-    this.setData({
-      dataList: itemList1,
-      isMoving: false
-    });
   },
 
   showDeleteConfirmation(e) {
     const that = this;
-    // 在点击删除按钮或者触发删除操作时调用这个函数
-
     wx.showModal({
       title: '确认删除',
       content: '您确定要删除吗？', // 提示信息
@@ -90,7 +43,11 @@ Page({
     });
 
   },
-
+  onTextAreaInput: function (e) {
+    this.setData({
+      textAreaValue: e.detail.value,
+    });
+  },
   onGetData() {
 
     wx.p.request({
