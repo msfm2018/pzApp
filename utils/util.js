@@ -28,9 +28,13 @@ export function getToken() {
               app.globalData.token = jsonData.openid;
               app.globalData.userid = json.data.maxid;
 
-              wx.p.request({
-                url: 'https://api.xbzx.online:9011/api_save_user',
+             wx.p.request({
+                url: 'https://api.xbzx.online:9011/user/api_save_user',
                 method: "post",
+                header: {
+                  'content-type': 'application/json',
+                  'Authorization': 'Bearer ' + app.globalData.token
+                },
                 data: {
                   openid: jsonData.openid,
                   name: '',
