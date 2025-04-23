@@ -25,7 +25,7 @@ Page({
     })
     //申请派单
     wx.p.request({
-      url: 'https://api.xbzx.online:9011/api_service_order_application_table_agent',
+      url: 'http://127.0.0.1:9091/api_service_order_application_table_agent',
       method: "post",
       data: {
         phone: this.data.phone
@@ -46,7 +46,7 @@ Page({
 
     //申请派单
     wx.p.request({
-      url: 'https://api.xbzx.online:9011/api_service_order_application_table_myfinish',
+      url: 'http://127.0.0.1:9091/api_service_order_application_table_myfinish',
       method: "post",
       data: {
         phone: this.data.phone
@@ -71,7 +71,7 @@ Page({
     console.log(this.data.phone);
     //修改订单状态
     wx.p.request({
-      url: 'https://api.xbzx.online:9011/api_service_order_application_table_myfinish',
+      url: 'http://127.0.0.1:9091/api_service_order_application_table_myfinish',
       method: "post",
       data: {
         orderid: orderid,
@@ -101,7 +101,7 @@ Page({
 
     //查询派单
     wx.p.request({
-      url: 'https://api.xbzx.online:9011/api_service_order_application_table',
+      url: 'http://127.0.0.1:9091/api_service_order_application_table',
       method: "post",
       data: {
         phone: that.data.phone,
@@ -127,7 +127,7 @@ Page({
   onGetData() {
 
     wx.p.request({
-      url: 'https://api.xbzx.online:9011/api_service_order_all',
+      url: 'http://127.0.0.1:9091/api_service_order_all',
       method: "post",
       data: {
         userid: 'tmp',

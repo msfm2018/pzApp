@@ -108,7 +108,7 @@ Page({
         const {
           data: rdata
         } = await wx.p.request({
-          url: 'https://api.xbzx.online:9011/api_service_order',
+          url: 'http://127.0.0.1:9091/api_service_order',
           method: "post",
           data: {
             phone: this.data.phone,

@@ -1,1 +1,292 @@
-var _=(r,i)=>()=>(i||r((i={exports:{}}).exports,i),i.exports);var y=_(d=>{"use strict";Object.defineProperty(d,"__esModule",{value:!0}),d.createActions=d.createDataFieldsReactions=void 0;var A,x,m=require("mobx-miniprogram");function O(r){if(Array.isArray(r)){for(var i=0,e=new Array(r.length);i<r.length;i++)e[i]=r[i];return e}}function S(r,i,e){return i in r?Object.defineProperty(r,i,{value:e,enumerable:!0,configurable:!0,writable:!0}):r[i]=e,r}function j(r){if(Symbol.iterator in Object(r)||Object.prototype.toString.call(r)==="[object Arguments]")return Array.from(r)}function D(){throw new TypeError("Invalid attempt to spread non-iterable instance")}function F(r){for(var i=1;i<arguments.length;i++){var e=arguments[i]!=null?arguments[i]:{},n=Object.keys(e);typeof Object.getOwnPropertySymbols=="function"&&(n=n.concat(Object.getOwnPropertySymbols(e).filter(function(t){return Object.getOwnPropertyDescriptor(e,t).enumerable}))),n.forEach(function(t){S(r,t,e[t])})}return r}function w(r){return O(r)||j(r)||D()}var q=function(r,i){var e=i.store,n=i.actions;if(n){if(e===void 0)throw new Error("[mobx-miniprogram] no store specified");Array.isArray(n)?n.forEach(function(t){if(r[t])throw new Error("[mobx-miniprogram] multiple action definition");r[t]=function(){for(var a=arguments.length,u=new Array(a),c=0;c<a;c++)u[c]=arguments[c];return(A=e)[t].apply(A,w(u))}}):typeof n=="object"&&Object.keys(n).forEach(function(t){var a=n[t];if(typeof t!="string"&&typeof t!="number")throw new Error("[mobx-miniprogram] unrecognized field definition");r[t]=function(){for(var u=arguments.length,c=new Array(u),s=0;s<u;s++)c[s]=arguments[s];return(x=e)[a].apply(x,w(c))}})}};d.createActions=q;var C=function(r,i){var e=i.store,n=i.fields,t=i.structuralComparison,a=i.namespace||"";if(a&&typeof a!="string")throw new Error("[mobx-miniprogram] namespace only expect string");a=a.replace(/ /gm,"");var u=Object.assign({},r[a]),c=t?m.comparer.structural:void 0,s=null,B=function(){if(s!==null){var o=s;s=null,r.setData(o)}},h=function(o,f){s||(s={},wx.nextTick(B)),a!==""?(u=F({},u,S({},o,m.toJS(f))),s[a]=u):s[o]=m.toJS(f)},l=[];if(Array.isArray(n)){if(e===void 0)throw new Error("[mobx-miniprogram] no store specified");l=n.map(function(o){return m.reaction(function(){return e[o]},function(f){h(o,f)},{equals:c,fireImmediately:!0})})}else typeof n=="object"&&n&&(l=Object.keys(n).map(function(o){var f=n[o];if(typeof f=="function")return m.reaction(function(){return f.call(r,e)},function(b){h(o,b)},{equals:c,fireImmediately:!0});if(typeof o!="string"&&typeof o!="number")throw new Error("[mobx-miniprogram] unrecognized field definition");if(e===void 0)throw new Error("[mobx-miniprogram] no store specified");return m.reaction(function(){return e[f]},function(b){h(String(o),b)},{equals:c,fireImmediately:!0})}));return{updateStoreBindings:B,destroyStoreBindings:function(){l.forEach(function(o){return o()})}}};d.createDataFieldsReactions=C});var M=_(p=>{"use strict";Object.defineProperty(p,"__esModule",{value:!0}),p.behavior=void 0;var g=y(),R=Behavior({definitionFilter:function(r){r.methods=r.methods||{};var i=r.storeBindings;r.methods._mobxMiniprogramBindings=function(){return i},i&&(Array.isArray(i)?i.forEach(function(e){g.createActions(r.methods,e)}):g.createActions(r.methods,i))},lifetimes:{attached:function(){if(typeof this._mobxMiniprogramBindings=="function"){var r=this._mobxMiniprogramBindings();if(!r)return void(this._mobxMiniprogramBindings=null);if(Array.isArray(r)){var i=this;this._mobxMiniprogramBindings=r.map(function(e){var n=g.createDataFieldsReactions(i,e);return n.updateStoreBindings(),n})}else this._mobxMiniprogramBindings=g.createDataFieldsReactions(this,r),this._mobxMiniprogramBindings.updateStoreBindings()}},detached:function(){this._mobxMiniprogramBindings&&(Array.isArray(this._mobxMiniprogramBindings)?this._mobxMiniprogramBindings.forEach(function(r){r.destroyStoreBindings()}):this._mobxMiniprogramBindings.destroyStoreBindings())}},methods:{updateStoreBindings:function(){this._mobxMiniprogramBindings&&typeof this._mobxMiniprogramBindings!="function"&&(Array.isArray(this._mobxMiniprogramBindings)?this._mobxMiniprogramBindings.forEach(function(r){r.updateStoreBindings()}):this._mobxMiniprogramBindings.updateStoreBindings())}}});p.behavior=R});"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.ComponentWithStore=I,exports.BehaviorWithStore=W,exports.createStoreBindings=exports.storeBindingsBehavior=void 0;var v=M(),E=y();function I(r){return Array.isArray(r.behaviors)||(r.behaviors=[]),r.behaviors.unshift(v.behavior),Component(r)}function W(r){return Array.isArray(r.behaviors)||(r.behaviors=[]),r.behaviors.unshift(v.behavior),Behavior(r)}var k=function(r,i){return E.createActions(r,i),E.createDataFieldsReactions(r,i)};exports.createStoreBindings=k;var P=v.behavior;exports.storeBindingsBehavior=P;
+module.exports =
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = function(exports) {
+/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 		}
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
+/******/ 	// create a fake namespace object
+/******/ 	// mode & 1: value is a module id, require it
+/******/ 	// mode & 2: merge all properties of value into the ns
+/******/ 	// mode & 4: return value when already ns object
+/******/ 	// mode & 8|1: behave like require
+/******/ 	__webpack_require__.t = function(value, mode) {
+/******/ 		if(mode & 1) value = __webpack_require__(value);
+/******/ 		if(mode & 8) return value;
+/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
+/******/ 		var ns = Object.create(null);
+/******/ 		__webpack_require__.r(ns);
+/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
+/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
+/******/ 		return ns;
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ })
+/************************************************************************/
+/******/ ([
+/* 0 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+exports.storeBindingsBehavior = undefined;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+exports.createStoreBindings = createStoreBindings;
+
+var _mobxMiniprogram = __webpack_require__(1);
+
+function _createActions(methods, options) {
+  var store = options.store,
+      actions = options.actions;
+
+
+  if (!actions) return;
+
+  // for array-typed fields definition
+  if (typeof store === 'undefined') {
+    throw new Error('[mobx-miniprogram] no store specified');
+  }
+
+  if (actions instanceof Array) {
+    // eslint-disable-next-line arrow-body-style
+    actions.forEach(function (field) {
+      methods[field] = function () {
+        return store[field].apply(store, arguments);
+      };
+    });
+  } else if ((typeof actions === 'undefined' ? 'undefined' : _typeof(actions)) === 'object') {
+    // for object-typed fields definition
+    Object.keys(actions).forEach(function (field) {
+      var def = actions[field];
+      if (typeof field !== 'string' && typeof field !== 'number') {
+        throw new Error('[mobx-miniprogram] unrecognized field definition');
+      }
+      methods[field] = function () {
+        return store[def].apply(store, arguments);
+      };
+    });
+  }
+}
+
+function _createDataFieldsReactions(target, options) {
+  var store = options.store,
+      fields = options.fields;
+
+  // setData combination
+
+  var pendingSetData = null;
+  function applySetData() {
+    if (pendingSetData === null) return;
+    var data = pendingSetData;
+    pendingSetData = null;
+    target.setData(data);
+  }
+  function scheduleSetData(field, value) {
+    if (!pendingSetData) {
+      pendingSetData = {};
+      wx.nextTick(applySetData);
+    }
+    pendingSetData[field] = value;
+  }
+
+  // handling fields
+  var reactions = [];
+  if (fields instanceof Array) {
+    // for array-typed fields definition
+    if (typeof store === 'undefined') {
+      throw new Error('[mobx-miniprogram] no store specified');
+    }
+    // eslint-disable-next-line arrow-body-style
+    reactions = fields.map(function (field) {
+      return (0, _mobxMiniprogram.reaction)(function () {
+        return store[field];
+      }, function (value) {
+        scheduleSetData(field, value);
+      }, {
+        fireImmediately: true
+      });
+    });
+  } else if ((typeof fields === 'undefined' ? 'undefined' : _typeof(fields)) === 'object' && fields) {
+    // for object-typed fields definition
+    reactions = Object.keys(fields).map(function (field) {
+      var def = fields[field];
+      if (typeof def === 'function') {
+        return (0, _mobxMiniprogram.reaction)(function () {
+          return def.call(target, store);
+        }, function (value) {
+          scheduleSetData(field, value);
+        }, {
+          fireImmediately: true
+        });
+      }
+      if (typeof field !== 'string' && typeof field !== 'number') {
+        throw new Error('[mobx-miniprogram] unrecognized field definition');
+      }
+      if (typeof store === 'undefined') {
+        throw new Error('[mobx-miniprogram] no store specified');
+      }
+      return (0, _mobxMiniprogram.reaction)(function () {
+        return store[def];
+      }, function (value) {
+        scheduleSetData(String(field), value);
+      }, {
+        fireImmediately: true
+      });
+    });
+  }
+
+  var destroyStoreBindings = function destroyStoreBindings() {
+    reactions.forEach(function (reaction) {
+      return reaction();
+    });
+  };
+
+  return {
+    updateStoreBindings: applySetData,
+    destroyStoreBindings: destroyStoreBindings
+  };
+}
+
+function createStoreBindings(target, options) {
+  _createActions(target, options);
+  return _createDataFieldsReactions(target, options);
+}
+
+var storeBindingsBehavior = exports.storeBindingsBehavior = Behavior({
+  definitionFilter: function definitionFilter(defFields) {
+    if (!defFields.methods) {
+      defFields.methods = {};
+    }
+    var storeBindings = defFields.storeBindings;
+
+    defFields.methods._mobxMiniprogramBindings = function () {
+      return storeBindings;
+    };
+    if (storeBindings) {
+      if (Array.isArray(storeBindings)) {
+        storeBindings.forEach(function (binding) {
+          _createActions(defFields.methods, binding);
+        });
+      } else {
+        _createActions(defFields.methods, storeBindings);
+      }
+    }
+  },
+  attached: function attached() {
+    if (typeof this._mobxMiniprogramBindings !== 'function') return;
+    var storeBindings = this._mobxMiniprogramBindings();
+    if (!storeBindings) {
+      this._mobxMiniprogramBindings = null;
+      return;
+    }
+    if (Array.isArray(storeBindings)) {
+      var that = this;
+      this._mobxMiniprogramBindings = storeBindings.map(function (item) {
+        return _createDataFieldsReactions(that, item);
+      });
+    } else {
+      this._mobxMiniprogramBindings = _createDataFieldsReactions(this, storeBindings);
+    }
+  },
+  detached: function detached() {
+    if (this._mobxMiniprogramBindings) {
+      if (Array.isArray(this._mobxMiniprogramBindings)) {
+        this._mobxMiniprogramBindings.forEach(function (bd) {
+          bd.destroyStoreBindings();
+        });
+      } else {
+        this._mobxMiniprogramBindings.destroyStoreBindings();
+      }
+    }
+  },
+
+  methods: {
+    updateStoreBindings: function updateStoreBindings() {
+      if (this._mobxMiniprogramBindings && typeof this._mobxMiniprogramBindings !== 'function') {
+        if (Array.isArray(this._mobxMiniprogramBindings)) {
+          this._mobxMiniprogramBindings.forEach(function (bd) {
+            bd.updateStoreBindings();
+          });
+        } else {
+          this._mobxMiniprogramBindings.updateStoreBindings();
+        }
+      }
+    }
+  }
+});
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports) {
+
+module.exports = require("mobx-miniprogram");
+
+/***/ })
+/******/ ]);
+//# sourceMappingURL=index.js.map

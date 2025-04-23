@@ -17,7 +17,7 @@ Page({
     if (checkModbile(this.data.phone.trim()) && (this.data.pwd.trim().length > 0)) {
 
       wx.p.request({
-        url: 'https://api.xbzx.online:9011/api_companions_login',
+        url: 'http://127.0.0.1:9091/api_companions_login',
         method: "post",
         data: {
           phone: this.data.phone,

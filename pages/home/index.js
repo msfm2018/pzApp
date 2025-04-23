@@ -6,7 +6,7 @@ Page({
   data: {
     swiperList: [],
     gridList: [],
-    imageUrl: 'https://xbzx.online/swiper/local.png'
+    imageUrl: 'http://127.0.0.1/swiper/local.png'
   },
 
   swiperClick() {
@@ -16,7 +16,7 @@ Page({
   },
   getSwiperList() {
     wx.request({
-      url: 'https://api.xbzx.online:9011/api_swiper',
+      url: 'http://127.0.0.1:9091/api_swiper',
       method: 'GET',
       success: (res) => {
         console.log(res.data.data);
@@ -37,7 +37,7 @@ Page({
 
   getGridList() {
     wx.request({
-      url: 'https://api.xbzx.online:9011/api_server_info_get',
+      url: 'http://127.0.0.1:9091/api_server_info_get',
       method: 'GET',
       success: (res) => {
         this.setData({

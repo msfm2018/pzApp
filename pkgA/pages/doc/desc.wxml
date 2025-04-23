@@ -7,11 +7,11 @@
 		</view>
 
     <view class="img" wx:if="{{id==4}}">
-      <image mode="aspectFit" src="https://xbzx.online/allimg/1.jpg"></image>
-      <image mode="aspectFit" src="https://xbzx.online/allimg/2.jpg"></image>
-      <image mode="aspectFit" src="https://xbzx.online/allimg/3.jpg"></image>
-      <image mode="aspectFit" src="https://xbzx.online/allimg/4.jpg"></image>
-      <image mode="aspectFit" src="https://xbzx.online/allimg/5.jpg"></image>
+      <image mode="aspectFit" src="http://127.0.0.1/allimg/1.jpg"></image>
+      <image mode="aspectFit" src="http://127.0.0.1/allimg/2.jpg"></image>
+      <image mode="aspectFit" src="http://127.0.0.1/allimg/3.jpg"></image>
+      <image mode="aspectFit" src="http://127.0.0.1/allimg/4.jpg"></image>
+      <image mode="aspectFit" src="http://127.0.0.1/allimg/5.jpg"></image>
     </view>
     <view class="img" wx:else>
       <image mode="aspectFit" src="{{url}}"></image>

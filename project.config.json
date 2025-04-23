@@ -41,17 +41,24 @@
     "useCompilerPlugins": false,
     "ignoreUploadUnusedFiles": false,
     "useStaticServer": true,
-    "condition": false
+    "condition": true,
+    "compileWorklet": false,
+    "localPlugins": false,
+    "swc": false,
+    "disableSWC": true
   },
   "compileType": "miniprogram",
   "libVersion": "3.0.2",
   "appid": "wx13bedc440b726408",
   "projectname": "陪诊小宝",
   "simulatorType": "wechat",
-  "simulatorPluginLibVersion": {},
+  "simulatorPluginLibVersion": {
+    "wxext14566970e7e9f62": "3.6.5-29"
+  },
   "condition": {},
   "editorSetting": {
     "tabIndent": "insertSpaces",
     "tabSize": 2
-  }
+  },
+  "projectArchitecture": "multiPlatform"
 }

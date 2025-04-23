@@ -23,7 +23,7 @@ Page({
     if (value.nick && value.phone && value.detail) {
       if (checkModbile(value.phone)) {
         wx.p.request({
-          url: 'https://api.xbzx.online:9011/api_user_info_update',
+          url: 'http://127.0.0.1:9091/api_user_info_update',
           method: "post",
           data: {
             userid: app.globalData.userid,

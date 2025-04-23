@@ -7,7 +7,7 @@ export function getToken() {
       wx.login({
         success: res => {
           wx.p.request({
-            url: 'https://api.xbzx.online:9011/api_wxlogin',
+            url: 'http://127.0.0.1:9091/api_wxlogin',
             method: "post",
             data: {
               code: res.code,
@@ -29,7 +29,7 @@ export function getToken() {
               app.globalData.userid = json.data.maxid;
 
              wx.p.request({
-                url: 'https://api.xbzx.online:9011/user/api_save_user',
+                url: 'http://127.0.0.1:9091/user/api_save_user',
                 method: "post",
                 header: {
                   'content-type': 'application/json',
@@ -50,7 +50,7 @@ export function getToken() {
     } else {
       if (!app.globalData.userid) {
         wx.p.request({
-          url: 'https://api.xbzx.online:9011/api_user_info',
+          url: 'http://127.0.0.1:9091/api_user_info',
           method: "post",
           data: {
             openid: app.globalData.token,

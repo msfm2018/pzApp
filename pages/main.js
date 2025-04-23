@@ -18,7 +18,7 @@ Page({
 onReady(){
   let that=this;
   wx.request({
-    url: 'https://api.xbzx.online:9011/api_askphone',
+    url: 'http://127.0.0.1:9091/api_askphone',
     method: 'GET',
     success: (res) => {
       that.setData({

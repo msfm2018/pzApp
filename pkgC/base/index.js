@@ -244,7 +244,7 @@ Page({
       if ((this.isCardId(this.data.cardId)) &&(checkModbile(this.data.phone)))
       {
         wx.p.request({
-          url: 'https://api.xbzx.online:9011/api_companions',
+          url: 'http://127.0.0.1:9091/api_companions',
           method: "post",
           data: {
             name: this.data.name,
