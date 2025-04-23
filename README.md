@@ -13,7 +13,9 @@
 ![image](https://github.com/msfm2018/pzapp/blob/v3/32.jpg)
 ![image](https://github.com/msfm2018/pzapp/blob/v3/8.jpg)
 ![image](https://github.com/msfm2018/pzapp/blob/v3/9.jpg)
-![image](https://github.com/msfm2018/pzapp/blob/v3.1/1.png)
+
+
+
 ![image](https://github.com/msfm2018/pzapp/blob/v3.1/3.png)
 
 
